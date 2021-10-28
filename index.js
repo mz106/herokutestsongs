@@ -5,7 +5,7 @@ const passport = require("passport");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const connection = require("./connection");
+const { connection } = require("./connection");
 const { verifyStrategy, registerStrategy, loginStrategy } = require("./middleware/auth");
 const User = require("./models/user");
 const userRouter = require("./routes/user");
